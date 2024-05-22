@@ -1,4 +1,5 @@
 // Grays
+$white: #fff;
 $gray-100: #e9e9e9; // 233
 $gray-200: #d3d3d3; // 211
 $gray-300: #bdbdbd; // 189
@@ -10,7 +11,22 @@ $gray-800: #4f4f4f; // 79
 $gray-900: #393939; // 57
 $black: #232323; // 35
 
-// Primary Colors
-$primary-dark: #3d5782;
-$primary-color: #496fa5;
-$primary-light: #89a9d4;
+/* Base Colors */
+$primary-color: #3be95f;
+$secondary-color: #ed33ea;
+$accent-color: #120e2a;
+$highlight-color: #2bd9e6;
+
+/* Variants */
+$primary-color-light: #7dff97;
+$primary-color-dark: #2ca347;
+$secondary-color-light: #f280f2;
+$secondary-color-dark: #a120a1;
+$accent-color-light: #2d274b;
+$accent-color-dark: #0a0618;
+$highlight-color-light: #99f2f7;
+$highlight-color-dark: #1ca7b4;
+
+/* State Colors */
+$color-success: #67bf3a;
+$color-error: #ff3456;
