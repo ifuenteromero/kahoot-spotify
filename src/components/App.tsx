@@ -1,7 +1,7 @@
-import { projectName } from '../projectName';
+import Login from './Login';
 
 const App = () => {
-    return <h1>{projectName}</h1>;
+    return <Login />;
 };
 
 export default App;
