@@ -1,5 +1,4 @@
-@import 'colors';
-@import 'variables';
+@import 'main';
 
 html {
     box-sizing: border-box;
@@ -35,11 +34,20 @@ html {
 body {
     font-size: 1.6rem;
     margin: 0;
+    width: 100vw;
     height: 100vh;
     font-family: $main-font;
+    background-color: $accent-color;
 }
 
 #root {
     height: 100%;
     padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    &:active {
+        color: $white;
+    }
 }
