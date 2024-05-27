@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/App.tsx';
+import { RouterProvider } from 'react-router-dom';
+import { LoginProvider } from './contexts/LoginContext';
+import router from './router';
 import './styles/index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App />
+        <LoginProvider>
+            <RouterProvider router={router} />
+        </LoginProvider>
     </React.StrictMode>
 );
