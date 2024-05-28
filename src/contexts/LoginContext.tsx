@@ -3,7 +3,7 @@ import { tokenKey } from '../utils/localStorage';
 import { getTokenFromResponse } from '../utils/login';
 import routes from '../utils/routes';
 
-interface LoginContextProps {
+export interface LoginContextProps {
     isLogged: boolean;
 }
 
