@@ -1,0 +1,10 @@
+@import 'main';
+
+.error-page {
+    color: $primary-color;
+    @include gap-margin(1rem);
+    font-size: 2rem;
+    a {
+        color: $primary-color;
+    }
+}

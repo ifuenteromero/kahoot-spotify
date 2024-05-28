@@ -12,7 +12,7 @@ export const scopes = [
 ];
 
 export const getTokenFromResponse = () => {
-    const location = window.location.hash;
+    const location = window.location.href;
     const [access_token_part] = location.split('&');
     const [, access_token] = access_token_part.split('=');
     return access_token;
