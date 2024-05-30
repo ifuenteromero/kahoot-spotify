@@ -6,6 +6,9 @@ const login = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}
     '%20'
 )}&response_type=token&show_dialog=true`;
 
+const spotifyBaseUrl = 'https://api.spotify.com/v1';
+
 export default {
     login,
+    spotifyBaseUrl,
 };
