@@ -25,5 +25,5 @@ export const token = localStorage.getItem(tokenKey);
 
 export const logout = () => {
     localStorage.removeItem(tokenKey);
-    window.location.assign(routes.login);
+    window.location.href = routes.baseUrl;
 };
