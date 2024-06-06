@@ -1,3 +1,6 @@
+import { tokenKey } from './localStorage';
+import routes from './routes';
+
 export const redirectUri = import.meta.env.VITE_LOGIN_REDIRECT_URI;
 
 export const clientId = import.meta.env.VITE_CLIENT_ID;
@@ -16,4 +19,11 @@ export const getTokenFromResponse = () => {
     const [access_token_part] = location.split('&');
     const [, access_token] = access_token_part.split('=');
     return access_token;
+};
+
+export const token = localStorage.getItem(tokenKey);
+
+export const logout = () => {
+    localStorage.removeItem(tokenKey);
+    window.location.assign(routes.login);
 };
