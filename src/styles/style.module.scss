@@ -1,0 +1,11 @@
+@import 'main';
+
+:export {
+    mainFont: $main-font;
+    fontSize: $font-size;
+    primaryColor: $primary-color;
+    secondaryColor: $secondary-color;
+    accentColor: $accent-color;
+    accentColorLight: $accent-color-light;
+    accentColorDark: $accent-color-dark;
+}
