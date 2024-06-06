@@ -6,8 +6,10 @@ import routes from '../utils/routes';
 
 const ErrorPage = () => {
     const error = useRouteError();
-    const errorText =
-        isRouteErrorResponse(error) && 'The requested page was not found.';
+    const isValidPage = isRouteErrorResponse(error);
+    const errorText = isValidPage
+        ? 'The requested page was not found.'
+        : 'An unexpected error occurred.';
 
     const { isLogged } = useContext(LoginContext);
     const redirectLink = isLogged ? routes.root : routes.login;

@@ -8,7 +8,10 @@ const login = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}
 
 const spotifyBaseUrl = 'https://api.spotify.com/v1';
 
+const currentUser = '/me';
+
 export default {
     login,
     spotifyBaseUrl,
+    currentUser,
 };
