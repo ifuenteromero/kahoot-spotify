@@ -1,4 +1,5 @@
 import TopBar from '../components/TopBar';
+import WithLoading from '../components/WithLoading';
 import useUserProfile from '../hooks/useUserProfile';
 import '../styles/landing.scss';
 
@@ -6,7 +7,7 @@ const LandingPage = () => {
     const { isLoading, error } = useUserProfile();
     if (error) throw error;
 
-    const buttonText = isLoading ? 'Loading...' : 'logged';
+    const buttonText = 'logged';
 
     return (
         <div className='landing'>
@@ -14,7 +15,9 @@ const LandingPage = () => {
                 <TopBar />
             </header>
             <main>
-                <p id='logged'>{buttonText}</p>
+                <WithLoading isLoading={isLoading}>
+                    <p id='logged'>{buttonText}</p>
+                </WithLoading>
             </main>
         </div>
     );

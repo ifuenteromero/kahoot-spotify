@@ -31,8 +31,9 @@ describe('LandingPage', () => {
             </TestingProviders>
         );
 
-        const getLoading = () => screen.queryByText(/loading/i);
-        const waitForLoading = () => waitForElementToBeRemoved(getLoading);
+        const getLoading = () => screen.queryByRole('progressbar');
+        const waitForLoading = () =>
+            waitForElementToBeRemoved(getLoading, { timeout: 1500 });
         const user = userEvent.setup();
 
         return {
