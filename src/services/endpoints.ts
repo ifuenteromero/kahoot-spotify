@@ -9,9 +9,13 @@ const login = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}
 const spotifyBaseUrl = 'https://api.spotify.com/v1';
 
 const currentUser = '/me';
+const playlists = `${currentUser}/playlists`;
+const playlist = (id: string) => `/playlists/${id}`;
 
 export default {
     login,
     spotifyBaseUrl,
     currentUser,
+    playlists,
+    playlist,
 };

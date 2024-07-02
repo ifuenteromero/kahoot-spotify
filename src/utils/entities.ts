@@ -14,3 +14,24 @@ export const mapUserProfileResponse = (
     name: data.display_name,
     image: data.images?.[0].url,
 });
+
+export interface Playlist {
+    id: string;
+    name: string;
+    tracks: { items: { track: Track }[] };
+}
+
+export interface PlaylistsResponse {
+    items: Playlist[];
+}
+
+interface Artist {
+    id: string;
+    name: string;
+}
+
+export interface Track {
+    id: string;
+    artists: Artist[];
+    preview_url: string;
+}
